@@ -18,27 +18,30 @@ body, html {
 
 }
 h1{
+	color: #0067d9ff;
 
 }
 .section{
-	width: 10em;
-	height: 10em;
+	
 	display: inline-block;
-	background-color: darkblue;
+	background-color: #37b773ff;
 	transition: 0.4s ease-in-out;
 	margin: 20px;
 	display: inline-flex;
-	align-items: center;
+	
 	justify-content: center;
+	border-radius: 10%;
 
 
 }
 .section:hover{
-	background-color: skyblue;
+	background-color: #0067d9ff;
 
 }
 .section h1{
 	color: white;
+	font-size: 1.5em;
+	padding: 3px;
 	
 	
 
