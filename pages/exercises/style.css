@@ -15,6 +15,9 @@ body, html{
 	display: inline-flex;
 	vertical-align: top;
 }
+.card img{
+	width: 15%;
+}
 .east{
 background-color: blue;
 }
@@ -22,3 +25,4 @@ background-color: blue;
 .west{
 background-color: green;
 }
+
