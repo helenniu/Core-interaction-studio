@@ -8,6 +8,8 @@
 <body>
 	<div id='main'>
 	</div>
+
+	<div id='lighbox'></div>
 </body>
 
 <script type="text/javascript">
@@ -17,6 +19,7 @@
 				function(data){
 					console.log(data)
 					viewData(data,'main')
+					seeDetails(data)
 				}
 				)
 			.catch(function(error){
@@ -29,10 +32,13 @@
 			el = document.querySelector('#' +location_id)
 			//write everything as text to this location
 			//el.innerHTML = data[0]['word']
-			data.forEach(function(item){
+			data.forEach(function(item, i){
+				console.log(i)
 					div = document.createElement('div')
 					div.setAttribute('class','card')
 					div.classList.add(item['region'])
+
+					div.settAtribute()
 					h1 = document.createElement('h1')
 					h1.innerHTML=item['word']
 					img = document.createElement('img')
@@ -42,6 +48,16 @@
 					el.appendChild(div)
 			})
 
+		}
+
+		function seeDetails(data){
+			items = document.querySelectorAll('.card')
+			items.forEach(function(item)){
+				item.onclick=function(){
+					value = this.getAttribute('value')
+					console.log/value
+				}
+			}
 		}
 
 	
