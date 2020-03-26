@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>east</title>
+	<link rel="stylesheet" type="text/css" href="css/region.css">
+	<link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gelasio:400i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200i&display=swap" rel="stylesheet">
+</head>
+<body>
+<!---fixed--->
+	<div class="head">
+		<h1>you most likely say…</h1>
+	</div>
+
+	<div class="bar">
+		
+	</div>
+
+	<div class="speakingamerican">
+		
+		<h1>
+			<a href="index.html">
+			<span class="hr1">SPEAKING</span> <span class="hr2">AMERICAN</span>
+			</a>
+		</h1>
+	</div>
+
+	<div class="east">
+		
+		<h1>
+			EAST
+		</h1>
+	</div>
+<!---fixed--->
+
+<!---pronunciations--->
+	<div class="word" id="a">
+		<h1>“CARA-MEL”</h1>
+	</div>
+
+	<div class="word" id="b">
+		<h1>"MAN-AZE"</h1>
+	</div>
+
+	<div class="word" id="c">
+		<h1>"PEE-CAN"</h1>
+	</div>
+
+	<div class="word" id="d">
+		<h1>"SEAR-UP"</h1>
+	</div>
+
+	<div class="word" id="e">
+		<h1>"PA-JAH-MAS"</h1>
+	</div>
+
+<!---pronunciations--->
+
+<!---play button--->
+
+		<!---1--->
+ <audio id="sound">
+          <source src="audio/Caramel.mp3" />
+ </audio>
+
+    <div class="play">
+      	<button id="correct"></button>
+    </div>
+
+		<!---2--->
+<audio id="sound1">
+          <source src="audio/Manaze.mp3" />
+</audio>
+
+      <div class="play1">
+      	<button id="correct1"></button>
+      </div>
+
+		<!---3--->
+<audio id="sound2">
+          <source src="audio/Peecan.mp3" />
+</audio>
+
+      <div class="play2">
+      	<button id="correct2"></button>
+      </div>
+
+		<!---4--->
+<audio id="sound3">
+          <source src="audio/Searup.mp3" />
+</audio>
+
+      <div class="play3">
+      	<button id="correct3"></button>
+      </div>
+
+		<!---5--->
+<audio id="sound4">
+          <source src="audio/Pajahmas.mp3" />
+</audio>
+
+      <div class="play4">
+      	<button id="correct4"></button>
+      </div>
+
+<!---play button--->
+
+<!---min maj--->
+
+<div class="minmaj" id="m">
+	<h1>regional minority</h1>
+	
+</div>
+
+<div class="minmaj" id="m1">
+	<h1>regional minority</h1>
+	
+
+</div>
+
+<div class="minmaj" id="m2">
+	<h1>regional minority</h1>
+	
+
+</div>
+
+<div class="minmaj" id="m3">
+	<h1>regional minority</h1>
+	
+
+</div>
+
+<div class="minmaj" id="m4">
+	<h1>regional minority</h1>
+	
+
+</div>
+<!---min maj--->
+
+<!---states--->
+
+<div class="minmaj" id="s">
+	<h1>florida, south carolina, maine</h1>
+	
+</div>
+
+<div class="minmaj" id="s1">
+	<h1>south carolina, georgia, mississippi</h1>
+	
+
+</div>
+
+<div class="minmaj" id="s2">
+	<h1>new york, maine, vermont</h1>
+	
+
+</div>
+
+<div class="minmaj" id="s3">
+	<h1>pennsylvania, new jersey, connecticut</h1>
+	
+
+</div>
+
+<div class="minmaj" id="s4">
+	<h1>florida, maine, north carolina</h1>
+	
+
+</div>
+
+
+<!---states--->
+
+<script >
+	const mySound = document.getElementById("sound");
+	const correctButton = document.getElementById("correct");
+
+	const wrong1 = document.getElementById("correct1");
+    const wrong2 = document.getElementById("correct2");
+    const wrong3 = document.getElementById("correct3");
+    const wrong4 = document.getElementById("correct4");
+
+	correctButton.addEventListener("click", function(){
+        mySound.play();
+      })
+
+	wrong1.addEventListener("click", wrongAnswer1);
+      wrong2.addEventListener("click", wrongAnswer2);
+      wrong3.addEventListener("click", wrongAnswer3);
+      wrong4.addEventListener("click", wrongAnswer4);
+
+      function wrongAnswer1(e){
+          document.getElementById("sound1").play();
+      }
+
+      function wrongAnswer2(e){
+          document.getElementById("sound2").play();
+      }
+
+      function wrongAnswer3(e){
+          document.getElementById("sound3").play();
+      }
+
+      function wrongAnswer4(e){
+          document.getElementById("sound4").play();
+      }
+
+
+</script>
+
+</body>
+</html>
