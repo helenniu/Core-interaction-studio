@@ -123,8 +123,9 @@ background: linear-gradient(180deg, rgba(226,226,226,1) 0%, rgba(74,74,74,1) 100
 
 .stripeback2{
 	grid-column: 1/6;
-	grid-row: 12/13;
-	background-color: #4A4A4A;
+	grid-row: 11/13;
+	background: rgb(226,226,226);
+background: linear-gradient(0deg, rgba(226,226,226,1) 0%, rgba(74,74,74,1) 51%, rgba(226,226,226,1) 100%);
 
 	z-index: -40;
 }
@@ -153,7 +154,7 @@ background: linear-gradient(0deg, rgba(226,226,226,1) 0%, rgba(74,74,74,1) 100%)
 /*region sections*/
  .hide{
  	grid-column: 2/3;
-	grid-row: 7/12;
+	grid-row: 7/11;
 	background-color: #E2E2E2; 
 	z-index: -10;
 

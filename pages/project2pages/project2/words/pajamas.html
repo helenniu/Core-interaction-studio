@@ -1,10 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>pajamas</title>
+	<title>caramel</title>
 	<link rel="stylesheet" type="text/css" href="words.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gelasio:400i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200i&display=swap" rel="stylesheet">
 </head>
 <body>
 
+	
+
+	<div class="speakingamerican">
+		
+		<h1>
+			<a href="../index.html">
+			<span class="hr1">SPEAKING</span> <span class="hr2">AMERICAN</span>
+			</a>
+		</h1>
+	</div>
+
+	<div class="east">
+		
+		<h1>
+			PAJAMAS
+		</h1>
+	</div>
+
+	<div class="word" id="a">
+		<a href="../pron/pa-jah-mas.html">
+		<h1>“PA-JAH-MAS”</h1>
+	</a>
+	</div>
+
+	<div class="word" id="b">
+		<a href="../pron/pa-jam-mas.html">
+		<h1>"PA-JAM-MAS"</h1>
+	</a>
+	</div>
+
+		<!---1--->
+	<audio id="sound">
+          <source src="audio/Pajahmas.mp3" />
+ </audio>
+
+    <div class="play">
+      	<button id="correct"></button>
+    </div>
+
+		<!---2--->
+<audio id="sound1">
+          <source src="audio/Pajammas.mp3" />
+</audio>
+
+      <div class="play1">
+      	<button id="correct1"></button>
+      </div>
+
+
+<script >
+	const mySound = document.getElementById("sound");
+	const correctButton = document.getElementById("correct");
+
+	const wrong1 = document.getElementById("correct1");
+    const wrong2 = document.getElementById("correct2");
+    const wrong3 = document.getElementById("correct3");
+    const wrong4 = document.getElementById("correct4");
+
+	correctButton.addEventListener("click", function(){
+        mySound.play();
+      })
+
+	wrong1.addEventListener("click", wrongAnswer1);
+      wrong2.addEventListener("click", wrongAnswer2);
+      wrong3.addEventListener("click", wrongAnswer3);
+      wrong4.addEventListener("click", wrongAnswer4);
+
+      function wrongAnswer1(e){
+          document.getElementById("sound1").play();
+      }
+
+      function wrongAnswer2(e){
+          document.getElementById("sound2").play();
+      }
+
+      function wrongAnswer3(e){
+          document.getElementById("sound3").play();
+      }
+
+      function wrongAnswer4(e){
+          document.getElementById("sound4").play();
+      }
+
+
+</script>
 </body>
 </html>
