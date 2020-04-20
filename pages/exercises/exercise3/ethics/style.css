@@ -1,0 +1,107 @@
+
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: white;
+  overflow: hidden;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  clear: both;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (min-width: 800px) {
+  .column {
+    overflow: hidden;
+    margin: 0;
+    position: absolute;
+    transition: .3s cubic-bezier(.215,.61,.355,1);
+    height: 100%;
+    padding: 80px;
+    padding-left: 120px;
+    display: inline;
+    font-family: Helvetica ;
+    font-size: 40px;
+     box-shadow: 10px 20px 30px 5px black;
+  }
+
+  #white{
+
+  z-index: -1;
+  color: black;
+  width: calc(100%);
+  top: 0px;
+  left: 0px;
+  background-color: white;
+}
+
+#red{
+  z-index: 0;
+  color: black;
+  width: calc(100% - 300px);
+  top: 0px;
+  right: -1150px;
+  background-color: #eb4646;
+}
+
+#black{
+  z-index: 1;
+  color: white;
+  width: calc(100% - 200px);
+  right: -1350px;
+  background-color: black;
+}
+
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .column {
+   overflow: hidden;
+    margin: 0;
+    position: absolute;
+    transition: .3s cubic-bezier(.215,.61,.355,1);
+    width: 100%;
+    padding: 60px;
+    display: inline;
+    font-family: Helvetica ;
+    font-size: 40px;
+     /*box-shadow: 10px 20px 30px 5px black;*/
+  }
+
+  #white{
+    left: 0px;
+    height: calc(100%);
+  z-index: -1;
+  color: black;
+  width: 100%;
+  background-color: white;
+ top: 0px;
+}
+
+#red{
+  left: 0px;
+  height: calc(100% - 100px);
+  z-index: 0;
+  color: black;
+  width: 100%;
+  background-color: #eb4646;
+  bottom: -700px;
+}
+
+#black{
+  left: 0px;
+ height: calc(100% - 100px);
+  z-index: 1;
+  color: white;
+  width: 100%;
+  background-color: black;
+  bottom: -750px;
+}
+}
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercise</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+<div class="row">
+  <div class="column" id="white" onclick="focusWhite()" >
+  <p>Watch</p>
+  <p>Some text..</p>
+  </div>
+
+  <div class="column" id="red" onclick="focusRed()" >
+  <p>About</p>
+  <p>Some text..</p>
+  </div>
+
+  <div class="column" id="black" onclick="focusBlack()" >
+  <p>Information</p>
+  <p>Some text..</p>
+  </div>
+
+ </div>
+
+</body>
+
+<script type="text/javascript">
+	// Define our viewportWidth variable
+
+var viewportWidth = window.innerWidth
+console.log(viewportWidth)
+
+// Log the viewport width into the console
+
+	if (viewportWidth > 800) {
+   
+
+		function focusRed() {
+ 
+  document.getElementById('red').style.left = "50px";
+  
+
+}
+
+function focusBlack() {
+
+  document.getElementById('red').style.left = "50px";
+   document.getElementById('black').style.left = "100px";
+  
+}
+
+function focusWhite() {
+  
+  document.getElementById('red').style.left = "1250px";
+   document.getElementById('black').style.left = "1350px";
+}
+		
+	} else {
+
+    function focusRed() {
+ 
+  document.getElementById('red').style.bottom = "-60px";
+  
+
+}
+
+function focusBlack() {
+
+  document.getElementById('red').style.bottom = "-60px";
+   document.getElementById('black').style.bottom = "-100px";
+  
+}
+
+function focusWhite() {
+  
+  document.getElementById('red').style.bottom = "-700px";
+   document.getElementById('black').style.bottom = "-750px";
+}
+    
+    //run functions for small viewport here
+		
+	}
+
+// Set our initial width and log it
+setViewportWidth();
+logWidth();
+
+// On resize events, recalculate and log
+window.addEventListener('resize', function () {
+  setViewportWidth();
+  logWidth();
+}, false);
+
+
+
+
+
+
+
+	
+	
+
+</script>
+</html>
