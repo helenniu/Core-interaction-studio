@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>exercise</title>
+  <meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -29,26 +30,34 @@
 </body>
 
 <script type="text/javascript">
-	// Define our viewportWidth variable
 
-var viewportWidth = window.innerWidth
-console.log(viewportWidth)
 
-// Log the viewport width into the console
+var viewportWidth = window.innerWidth; 
 
-	if (viewportWidth > 800) {
+
+var setViewportWidth = function () {
+  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+}
+
+var logWidth = function () {
+  if (viewportWidth > 800) {
+    console.log('Wide viewport');
+  } else {
+    console.log('Small viewport');
+  }
+}
+
+  if (viewportWidth > 800) {
    
+    function focusRed() {
 
-		function focusRed() {
- 
-  document.getElementById('red').style.left = "50px";
-   document.getElementById('black').style.left = "1350px";
+    document.getElementById('red').style.left = "50px";
+    document.getElementById('black').style.left = "1350px";
   
 
 }
 
-function focusBlack() {
-
+  function focusBlack() {
   document.getElementById('red').style.left = "50px";
    document.getElementById('black').style.left = "100px";
   
@@ -59,9 +68,8 @@ function focusWhite() {
   document.getElementById('red').style.left = "1250px";
    document.getElementById('black').style.left = "1350px";
 }
-		
-	} else {
-
+  } else {
+    
     function focusRed() {
  
   document.getElementById('red').style.bottom = "-60px";
@@ -83,21 +91,20 @@ function focusWhite() {
    document.getElementById('black').style.bottom = "-750px";
 }
     
-    //run functions for small viewport here
-		
-	}
+  }
+
 
 // Set our initial width and log it
-setViewportWidth();
-logWidth();
+
 
 // On resize events, recalculate and log
-window.addEventListener('resize', function () {
+window.resize = function () {
+  console.log('resizing...')
   setViewportWidth();
   logWidth();
-}, false);
+}
 
-
+resize();
 
 
 
