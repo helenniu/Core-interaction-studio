@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercise 4</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="anime-master/lib/anime.min.js"></script>
+	<meta name="viewport" content="width=device-width">
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="button" id="button" onclick="cardUp()">
+		click me!
+	</div>
+
+</div>
+		
+
+	<div class="container" >
+		
+		<div class="card" id="card" onclick="cardDown()">
+			<h3> you just <em>clicked me!</em></h3>
+		</div>
+	</div>
+
+</body>
+
+<script type="text/javascript">
+
+ var animate = anime({
+  targets: '.card',
+ translateX: [
+    { value: 250, duration: 1000, delay: 500 },
+    { value: 0, duration: 1000, delay: 500 }
+  ],
+  translateY: [
+    { value: -40, duration: 500 },
+    { value: 40, duration: 500, delay: 1000 },
+    { value: 0, duration: 500, delay: 1000 }
+  ],
+  scaleX: [
+    { value: 4, duration: 100, delay: 500, easing: 'easeOutExpo' },
+    { value: 1, duration: 900 },
+    { value: 4, duration: 100, delay: 500, easing: 'easeOutExpo' },
+    { value: 1, duration: 900 }
+  ],
+  scaleY: [
+    { value: [1.75, 1], duration: 500 },
+    { value: 2, duration: 50, delay: 1000, easing: 'easeOutExpo' },
+    { value: 1, duration: 450 },
+    { value: 1.75, duration: 50, delay: 1000, easing: 'easeOutExpo' },
+    { value: 1, duration: 450 }
+  ],
+  easing: 'easeOutElastic(1, .8)',
+  loop: true
+})
+	
+	function cardUp(){
+
+    document.getElementById('card').style.bottom = "20vh";
+
+}
+
+function cardDown() {
+
+    document.getElementById('card').style.bottom = "-100vh";
+}
+
+
+
+</script>
+</html>
