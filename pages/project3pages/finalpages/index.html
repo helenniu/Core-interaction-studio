@@ -68,7 +68,9 @@ z-index: 20;
 <body>
 
 	<div class="arrow">
-		<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72"><defs><style>.cls-1{fill:none;stroke:#3d3e3f;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}</style></defs><title>arrow</title><g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right"><path id="Path_3" data-name="Path 3" class="cls-1" d="M18.08,36H53.92"/><path id="Path_4" data-name="Path 4" class="cls-1" d="M36,18.08,53.92,36,36,53.92"/></g></svg>
+		<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72"><defs><style>.cls-1{fill:none;stroke:#3d3e3f;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}</style></defs><title>arrow</title><g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right">
+			<path id="Path_3" data-name="Path 3" class="cls-1" d="M18.08,36H53.92"/>
+			<path id="Path_4" data-name="Path 4" class="cls-1" d="M36,18.08,53.92,36,36,53.92"/></g></svg>
 	</div>
 
 	<div id="main"></div>
@@ -80,7 +82,18 @@ z-index: 20;
 
 <script type="text/javascript">
 
-	
+const logoAnimation = anime.timeline({ 
+  autoplay: true,
+  delay: 500
+});
+
+logoAnimation.add({
+  targets: '#Layer_1',
+  translateY: [100, 0],
+  opacity: [0, 1],
+  elasticity: 600,
+  duration: 1600
+})
 	
 	var animation = bodymovin.loadAnimation({
   container: document.getElementById('main'), // Required
