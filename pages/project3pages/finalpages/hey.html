@@ -39,6 +39,17 @@ a{
 	z-index: 30;
 
 }
+
+.arrowback{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 30;
+	transform: scaleX(-1);
+
+}
 	
 	#main{
 		
@@ -95,8 +106,16 @@ z-index: 20;
 
 
 <body>
-<a href="alternate.html">
+<a href="home.html">
 	<div class="arrow">
+		<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72"><defs><style>.cls-1{fill:none;stroke:#3d3e3f;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}</style></defs><title>arrow</title><g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right">
+			<path id="Path_3" data-name="Path 3" class="cls-1" d="M18.08,36H53.92"/>
+			<path id="Path_4" data-name="Path 4" class="cls-1" d="M36,18.08,53.92,36,36,53.92"/></g></svg>
+	</div>
+	</a>
+
+	<a href="index.html">
+	<div class="arrowback">
 		<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72"><defs><style>.cls-1{fill:none;stroke:#3d3e3f;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}</style></defs><title>arrow</title><g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right">
 			<path id="Path_3" data-name="Path 3" class="cls-1" d="M18.08,36H53.92"/>
 			<path id="Path_4" data-name="Path 4" class="cls-1" d="M36,18.08,53.92,36,36,53.92"/></g></svg>
@@ -135,7 +154,7 @@ logoAnimation.add({
 	
 	var animation = bodymovin.loadAnimation({
   container: document.getElementById('main'), // Required
-  path: 'data/home.json', // Required
+  path: 'data/frame1.json', // Required
   renderer: 'svg/canvas/html', // Required
   loop: true, // Optional
   autoplay: true, // Optional
